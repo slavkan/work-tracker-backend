@@ -29,7 +29,7 @@ public class SecurityConfig {
 
 
     /* REAL AUTH */
-    /*@Bean
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(customizer -> customizer.disable())
                 .cors(Customizer.withDefaults())
@@ -57,10 +57,10 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
-    }/*
+    }
 
     /* NO AUTH */
-    @Bean
+    /*@Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request -> request
@@ -70,7 +70,7 @@ public class SecurityConfig {
                 // Comment out the JWT filter for testing
                 //.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
-    }
+    }*/
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
